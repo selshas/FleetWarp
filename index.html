@@ -1,0 +1,67 @@
+<!doctype html>
+
+<!--
+
+	Copyright by Yang Keon-Young(Ky Yang) 2018. All Rights Reserved. 
+
+	If you are new to Fleet-Warp framework, or need technical supports,
+	please contact selshas@gmail.com or visit Official Website.
+
+-->
+
+<html>
+
+	<head>
+
+		<!-- Should be change to your Website Title. -->
+		<title>
+			Fleet-Warp Web Framework. Warp your development.
+		</title>
+
+		<!-- href attribute of <base> Must be change to project Root path. -->
+		<base href="/"/>
+
+		<!-- <meta> Area -->
+		<meta charset="UTF-8" />
+		<meta name="Framework" content="FleetWarp" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+
+		<!-- Get global path_root from <base> tag -->
+		<script>
+			if ((bases = document.getElementsByTagName("base")) && (bases.length) && (base = bases[0])) {
+				path_root = base.getAttribute("href"); baseDir = path_root.substr(0, path_root.length-1);
+			}
+			else
+				console.error(new Error("There must be a <base> tag in <head> before <script>s."));
+			window.addEventListener("load", function(e) {if (!path_root) {e.preventDefault();}});
+		</script>
+
+		<!-- Framework Script Imports -->
+		<!-- Core File -->
+		<script src="./scripts/fleetWarp/General.js"></script>
+		<script src="./scripts/fleetWarp/Router.js"></script>
+		<script src="./scripts/fleetWarp/Templete.js"></script>
+		<!-- Utility File -->
+		<script src="./scripts/fleetWarp/CSSOverrider.js"></script>
+		<script src="./scripts/fleetWarp/CSSAnimator.js"></script>
+		<script src="./scripts/fleetWarp/Canvas.js"></script>
+		<script src="./scripts/fleetWarp/easingFunctions.js"></script>
+		
+		<!-- Business Codes -->
+		<script src="./scripts/routes.js"></script>
+		<script>
+		</script>
+
+		<!-- stylesheets -->
+		<link rel="stylesheet" type="text/css" href="./styles/common.css"/>
+		<style>
+			/* plain text/css */
+		</style>
+
+	</head>
+
+	<!-- <body> should have to be empty -->
+	<body>
+	</body>
+
+</html>

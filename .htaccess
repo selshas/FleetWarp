@@ -1,0 +1,9 @@
+RewriteEngine on
+
+RewriteRule ^index.html - [L]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !server-status
+
+RewriteRule (.*)$ index.html
